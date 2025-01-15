@@ -83,6 +83,29 @@
             audio.play();
             alert('Music started!');
         }
+
+        // Function to handle page transitions
+        let currentPage = 1;
+        const totalPages = 7;
+
+        function nextPage() {
+            const currentPageElement = document.getElementById('page' + currentPage);
+            const nextPageElement = document.getElementById('page' + (currentPage + 1));
+
+            if (nextPageElement) {
+                currentPageElement.classList.add('hidden'); // Hide the current page
+                nextPageElement.classList.remove('hidden'); // Show the next page
+                currentPage++; // Move to the next page
+            }
+        }
+
+        // Add event listeners to buttons to move between pages
+        document.getElementById('lightsButton').addEventListener('click', nextPage);
+        document.getElementById('decorateButton').addEventListener('click', nextPage);
+        document.getElementById('messageButton').addEventListener('click', nextPage);
+        document.getElementById('timerButton').addEventListener('click', nextPage);
+        document.getElementById('cakeButton').addEventListener('click', nextPage);
+        document.getElementById('finalButton').addEventListener('click', nextPage);
     </script>
 </body>
 </html>
