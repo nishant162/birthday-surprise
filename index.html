@@ -7,27 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Music -->
+    <!-- Background Music (hidden initially) -->
     <audio id="backgroundMusic" loop>
         <source src="birthday_song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    
-    <!-- Button to play music after user interaction -->
-    <button onclick="playMusic()">Play Music</button>
+
+    <!-- Button to start playing music -->
+    <button onclick="playMusic()">Click to play music</button>
 
     <!-- Page 1 -->
     <div class="page" id="page1">
         <button class="btn" id="lightsButton">Turn on the lights.</button>
     </div>
 
-    <!-- Rest of your content -->
+    <!-- Page 2 -->
     <div class="page hidden" id="page2">
         <div class="dim-lights"></div>
         <button class="btn" id="decorateButton">Why not let's make it look better!</button>
     </div>
 
-    <!-- Other pages -->
+    <!-- Page 3 -->
+    <div class="page hidden" id="page3">
+        <div class="balloons"></div>
+        <div class="ribbons"></div>
+        <button class="btn" id="messageButton">Hey birthday girl, click me!</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page hidden" id="page4">
+        <h1>Happy Birthday, Taxila! 🎉</h1>
+        <p>
+            So finally, it's your birthday today! Wishing you a very happy birthday, Taxila! 🎉  
+            May this day bring you the utmost joy and happiness. Thank you for always being there for me, helping me out, and in a way completing me, whether it's correcting my grammar, finishing my food or helping me become a more extroverted person. We've had plenty of fights in between, but honestly, they’re part of the fun!  
+            Lastly, I hope you enjoy your special day, and a big congratulations on turning 21!❤  
+
+            P.S. You wouldn’t find someone better than me, and neither would I, So..
+        </p>
+        <button class="btn" id="timerButton">I made more for you, come on click here!</button>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page hidden" id="page5">
+        <h1 id="timer">10</h1>
+        <button class="btn" id="cakeButton">Cake cutting time</button>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="page hidden" id="page6">
+        <p>
+            Hey Taxila, so you are almost at the end. I have made a digital cake for you, so let's cut it. 🎂
+        </p>
+        <div class="cake">🎂</div>
+        <button class="btn" id="finalButton">Finish</button>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="page hidden" id="page7">
+        <h1>Yayyy! 🎉</h1>
+        <p>
+            So, that’s how I, your digital friend, tried to create something special for you because you’ll always have a special place in my life. 
+            Once again, a very Happy Birthday! I truly hope you’ll always be a part of my journey, today and every day to come.  
+            This little gift of mine may not be perfect as I’m not exactly a pro at creating pages like this, but every word here is filled with love and my sincerest efforts. I hope it brings a smile to your face because that’s all I wanted.
+
+            Happiest birthday, dear! ❤
+        </p>
+    </div>
 
     <script src="script.js"></script>
 
@@ -36,6 +81,7 @@
         function playMusic() {
             const audio = document.getElementById('backgroundMusic');
             audio.play();
+            alert('Music started!');
         }
     </script>
 </body>
